@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-lg-9">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="col-lg-6">
+						<h1>Add activities here: </h1>
+					</div>
+					<div class="col-lg-6">
+						<div class="btn-group" role="group" aria-label="...">
+						  <button type="button" class="btn btn-default  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Hotel</button>
+						  <button type="button" class="btn btn-default">Activity</button>
+						  <button type="button" class="btn btn-default">Restaurant</button>
+						</div>
+						<div class="dropdown">
+							<!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    			Add a thing
+							    <span class="caret"></span>
+						  	</button> -->
+					  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu1List">
+							  <li class="dropdown-header">Hotels</li>
+							  <li><a href="#">Hotel 1 <i class="glyphicon glyphicon-plus-sign"></i></a></li>
+							  <li><a href="#">Hotel 2</a></li>
+							  <li><a href="#">Hotel 3</a></li>
+							  <li class="dropdown-header">Activities</li>
+							  <li><a href="#">Activity 1</a></li>
+							  <li><a href="#">Activity 2</a></li>
+							  <li><a href="#">Activity 3</a></li>
+							  <li class="dropdown-header">Restaurants</li>
+							  <li><a href="#">Restaurant 1</a></li>
+							  <li><a href="#">Restaurant 2</a></li>
+							  <li><a href="#">Restaurant 3</a></li>
+							</ul>
+						</div>
+					</div>
+		  		</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12" id="map-canvas"></div>
+			</div>
+		</div>
+		<div class="col-lg-3">
+	  		<p>days</p>
+	  	</div>
+  	</div>
+{% endblock %}
