@@ -1,3 +1,6 @@
+.body {
+  background-color: #eaeaea; }
+
 .container {
   width: 100%; }
 
@@ -12,7 +15,10 @@
 
 #dropdownMenu1List {
   width: 100%; }
+  #dropdownMenu1List button {
+    font-size: 1.3em;
+    margin: 3px 20px; }
 
-#dropdownMenu1List i {
-	color: #CADFAA;
-}
+.list-group-item.active {
+  background-color: #CADFAA;
+  border-color: #CADFAA; }

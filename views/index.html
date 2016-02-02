@@ -9,29 +9,24 @@
 						<h1>Add activities here: </h1>
 					</div>
 					<div class="col-lg-6">
-						<div class="btn-group" role="group" aria-label="...">
-						  <button type="button" class="btn btn-default  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Hotel</button>
-						  <button type="button" class="btn btn-default">Activity</button>
-						  <button type="button" class="btn btn-default">Restaurant</button>
-						</div>
 						<div class="dropdown">
-							<!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				    			Add a thing
 							    <span class="caret"></span>
-						  	</button> -->
+						  	</button>
 					  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu1List">
 							  <li class="dropdown-header">Hotels</li>
-							  <li><a href="#">Hotel 1 <i class="glyphicon glyphicon-plus-sign"></i></a></li>
-							  <li><a href="#">Hotel 2</a></li>
-							  <li><a href="#">Hotel 3</a></li>
+							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Hotel 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Hotel 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Hotel 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
 							  <li class="dropdown-header">Activities</li>
-							  <li><a href="#">Activity 1</a></li>
-							  <li><a href="#">Activity 2</a></li>
-							  <li><a href="#">Activity 3</a></li>
+							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Activity 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Activity 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Activity 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
 							  <li class="dropdown-header">Restaurants</li>
-							  <li><a href="#">Restaurant 1</a></li>
-							  <li><a href="#">Restaurant 2</a></li>
-							  <li><a href="#">Restaurant 3</a></li>
+							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Eatz 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Eatz 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
+							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Eatz 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
 							</ul>
 						</div>
 					</div>
@@ -45,4 +40,27 @@
 	  		<p>days</p>
 	  	</div>
   	</div>
+  	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Choose what days you like to stay/eat/do</h4>
+	      </div>
+	      <div class="modal-body">
+	        <ul class="list-group">
+	        	<a class="list-group-item">Day 1</a>
+	        	<a class="list-group-item">Day 2</a>
+	        	<a class="list-group-item">Day 3</a>
+	        	<a class="list-group-item">Day 4</a>
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-success" data-dismiss="modal">Add to Trip</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 {% endblock %}

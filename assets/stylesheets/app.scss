@@ -1,3 +1,7 @@
+.body {
+	background-color: #eaeaea;
+}
+
 .container {
 	width: 100%;
 }
@@ -15,8 +19,13 @@
 
 #dropdownMenu1List {
 	width:100%;
+	button {
+		font-size: 1.3em;
+		margin: 3px 20px;
+	}
 }
 
-#dropdownMenu1List li::after{
-	content: "<i glyphicon glyphicon-plus-sign></i>"
+.list-group-item.active {
+	background-color: #CADFAA;
+	border-color: #CADFAA;
 }
