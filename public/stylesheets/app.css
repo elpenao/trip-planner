@@ -16,3 +16,14 @@
 #dropdownMenu1List i {
 	color: #CADFAA;
 }
+
+
+#calendar p {
+	text-align: center;
+}
+#calendar .panel-heading {
+	text-align: center;
+	background-color: #434A4D;
+	color: #fff;
+	
+}
