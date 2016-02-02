@@ -11,14 +11,13 @@
 	height: 100%;
 }
 
-#dropdownMenu1 {
+.dropdown {
 	margin-top: 20px;
     margin-bottom: 10px;
-    width: 100%;
 }
 
 #dropdownMenu1List {
-	width:100%;
+	// width:200;
 	button {
 		font-size: 1.3em;
 		margin: 3px 20px;
@@ -28,4 +27,15 @@
 .list-group-item.active {
 	background-color: #CADFAA;
 	border-color: #CADFAA;
+}
+
+.panel-heading {
+	button {
+		padding: 3px 6px;
+		margin-top: -5px;
+	}
+}
+
+.btn-circle {
+	border-radius: 50%;
 }

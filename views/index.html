@@ -3,70 +3,72 @@
 {% block content %}
 	<div class="row">
 		<div class="col-lg-9">
-			<div class="row">
 				<div class="col-lg-12">
-					<div class="col-lg-6">
-						<h1>Add activities here: </h1>
+					<div class="col-lg-3">
+						<h3>Plan your trip here: </h3>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-3">
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    			Add a thing
+				    			Add a Hotel
 							    <span class="caret"></span>
 						  	</button>
 					  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu1List">
-							  <li class="dropdown-header">Hotels</li>
-							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Hotel 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Hotel 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Hotel 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
-							  <li class="dropdown-header">Activities</li>
-							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Activity 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Activity 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Activity 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
-							  <li class="dropdown-header">Restaurants</li>
-							  <li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Eatz 1 <i class="glyphicon glyphicon-plus-sign"></i></button></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Eatz 2 <i class="glyphicon glyphicon-plus-sign"></i></li>
-							  <li><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Eatz 3 <i class="glyphicon glyphicon-plus-sign"></i></li>
+							  	{% for hotel in hotels %}
+					  				<li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">{{hotel.name}} <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+					  			{% endfor %}							  
 							</ul>
 						</div>
 					</div>
-		  		</div>
-			</div>
-			<div class="row">
+					<div class="col-lg-3">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    			Add an Activitay
+							    <span class="caret"></span>
+						  	</button>
+					  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dropdownMenu1List">
+							  	{% for activity in activities %}
+					  				<li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">{{activity.name}} <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+					  			{% endfor %}							  
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    			Add some Eatz
+							    <span class="caret"></span>
+						  	</button>
+					  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu3" id="dropdownMenu1List">
+							  {% for restaurant in restaurants %}
+					  				<li><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">{{restaurant.name}} <i class="glyphicon glyphicon-plus-sign"></i></button></li>
+					  			{% endfor %}
+							</ul>
+						</div>
+					</div>
 				<div class="col-lg-12" id="map-canvas"></div>
-			</div>
+			</div>	
 		</div>
-		<div class="col-lg-3">
+		<div class="col-lg-3" id="itinerary">
 	  		<div id="calendar">
-	  			<p><strong>Trip Calendar</strong></p>
+	  			<h3>Trip Calendar</h3>
+	  			<input id="days" type="number" min="1" max="10" class="form-control" placeholder="How long is your trip?">
 	  			<div class="panel panel-default">
-				  
-				  <div class="panel-heading">Day 1</div>
-				  	
+				  <div class="panel-heading">Day 1 <button type="button" class="remove-day btn btn-danger btn-md btn-circle pull-right"><i class="glyphicon glyphicon-fire"></i></button></div>
 			  		<ul class="list-group">
-					  <li class="list-group-item">Act 1</li>
-					  <li class="list-group-item">Act 2</li>
-					  <li class="list-group-item">Act 3</li>
+					  <li class="list-group-item">Go to beach</li>
+					  <li class="list-group-item">Statue of Liberty</li>
+					  <li class="list-group-item">Broadway</li>
 					</ul>
-				  
-
 	  			</div>
 	  			<div class="panel panel-default">
-				  
-				  <div class="panel-heading">Day 2</div>
+				  <div class="panel-heading">Day 2 <button type="button" class="remove-day btn btn-danger btn-md btn-circle pull-right"><i class="glyphicon glyphicon-fire"></i></button></div>
 			  		<ul class="list-group">
-					  <li class="list-group-item">Act 1</li>
-					  <li class="list-group-item">Act 2</li>
-					  <li class="list-group-item">Act 3</li>
+					  <li class="list-group-item">Empire State Building</li>
+					  <li class="list-group-item">Nobu</li>
 					</ul>
-
-				  
 				</div>
-
 	  		</div>
-
-
-	  		
 	  	</div>
   	</div>
   	<!-- Modal -->
